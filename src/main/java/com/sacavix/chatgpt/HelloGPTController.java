@@ -16,7 +16,7 @@ public class HelloGPTController implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() {
-        System.out.println(" ===== Starting Chat GPT Boot ==== ");
+        System.out.println(" ===== Starting Chat GPT Spring Boot ==== ");
     }
 
     @GetMapping("/chat")
@@ -32,7 +32,7 @@ public class HelloGPTController implements InitializingBean {
         Integer maxTokens = 300;
 
         // GPT-3 models can understand and generate natural language. We offer four main models with different levels of power suitable for different tasks. Davinci is the most capable model, and Ada is the fastest.
-        String model = "text-davinci-003";
+        String model = "gpt-3.5-turbo";
 
         // What sampling temperature to use. Higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 (argmax sampling) for ones with a well-defined answer.We generally recommend altering this or top_p but not both.
         Double temperature = 0.5;
